@@ -3,32 +3,67 @@
   Authors: Derrick Chambers, Jeffrey Shragge
   Venue: in-review
 
-- Title: "Nodal seismic deployments at open-pit mines: a case study at the Bingham Canyon Mine"
-  Year: 2022 <a href="https://paperpile.com/shared/jrJSzN/download/15002f2e-fe6b-040c-9f6f-09578b5c1b45">📖</a>
-  Authors: Derrick Chambers, G Kevin Chapin, M Shawn Boltz
-  Venue: "RaSiM"
-
 - Title: Application of a convolutional neural network for seismic phase picking of mining-induced seismicity
   Year: 2022 <a href="https://paperpile.com/shared/nPYz3k/download/28bc8838-74a6-0e78-b2e6-f9edcd1cc10f">📖</a>
   Authors: Sean W Johnson, Derrick JA Chambers, Michael S Boltz, Keith D Koper
   Venue: <a href="https://academic.oup.com/gji/article/224/1/230/5917989">GJI</a>
 
+- Title: Isolating and Tracking Noise Sources across an Active Longwall Mine Using Seismic Interferometry.
+  Year: 2022 <a href="https://paperpile.com/shared/xJ9ubW/download/142806d3-7846-0bb6-ac22-9d05e089e26f">📖</a>
+  Authors: Santiago Rabade, Sin-Mei Wu, Fan-Chi Lin, Derrick Chambers
+  Venue: <a href="https://pubs.geoscienceworld.org/ssa/bssa/article/112/5/2396/614803/Isolating-and-Tracking-Noise-Sources-across-an">BSSA</a>
+
+- Title: "Nodal seismic deployments at open-pit mines: a case study at the Bingham Canyon Mine"
+  Year: 2022 <a href="https://paperpile.com/shared/jrJSzN/download/15002f2e-fe6b-040c-9f6f-09578b5c1b45">📖</a>
+  Authors: Derrick Chambers, G Kevin Chapin, M Shawn Boltz
+  Venue: "RaSiM"
+
+- Title: "ObsPlus: A Pandas-centric ObsPy expansion pack."
+  Year: 2021 <a href="https://joss.theoj.org/papers/10.21105/joss.02696.pdf">📖</a>
+  Authors: Derrick Chambers, M Shawn Boltz, Calum Chamberlain
+  Venue: <a href="https://joss.theoj.org/papers/10.21105/joss.02696">JOSS</a>
+
+- Title: A new catalog of explosion source parameters in the Utah region with application to ML–MC‐based depth discrimination at local distances.
+  Year: 2020 <a href="https://paperpile.com/shared/aYvShB/download/7a54384b-0b93-0a09-90e5-40601ff6c56a">📖</a>
+  Authors: Jonathan Voyles, Monique Holt, J Mark Hale, Keith Koper, Relu Burlacu, Derrick Chambers
+  Venue: <a href="https://pubs.geoscienceworld.org/ssa/srl/article/91/1/222/574770/A-New-Catalog-of-Explosion-Source-Parameters-in">SRL</a>
+
 - Title: Evaluating seismicity at underground coal mines using temporary surface geophone deployments
-  Year: 2018 <a href="https://www.researchgate.net/profile/M-Shawn-Boltz/publication/350589487_18-493_Evaluating_Seismicity_at_Underground_Coal_Mines_Using_Temporary_Surface_Geophone_Deployments/links/606748bf92851c91b19b7f2d/18-493-Evaluating-Seismicity-at-Underground-Coal-Mines-Using-Temporary-Surface-Geophone-Deployments.pdf">📖</a>
+  Year: 2018 <a href="https://paperpile.com/shared/vl0C5V/download/9ce96b3b-a8f7-02c4-8e8b-08b409bbe87d">📖</a>
   Authors: M Shawn Boltz, Derrick Chambers, Dave Hanson
   Venue: <a href="https://onepetro.org/ARMAUSRMS/proceedings/ARMA18/All-ARMA18/ARMA-2018-493/122457">ARMA</a>
+
+- Title: "EQcorrscan: Repeating and near‐repeating earthquake detection and analysis in Python."
+  Year: 2018 <a href="https://paperpile.com/shared/072voE/download/5b3233b0-7516-0934-9076-7b1ff87859bb">📖</a>
+  Authors: Calum Chamberlain, Chet Hopp; Carolin Boese, Emily Warren‐Smith, Derrick Chambers, Shanna Chu, Konstantinos Michailos, John Townend
+  Venue: <a href="https://pubs.geoscienceworld.org/ssa/srl/article/89/1/173/524875/EQcorrscan-Repeating-and-Near-Repeating-Earthquake">SRL</a>
+
+- Title: Numerical study of the relationship between seismic wave parameters and remotely triggered rockburst damage in hard rock tunnels
+  Year: 2017 <a href="https://papers.acg.uwa.edu.au/d/1704_26_Raffaldi/26_Raffaldi.pdf">📖</a>
+  Authors: Michael Raffaldi, Derrick Chambers, Jeffery Johnson
+  Venue: <a href="https://papers.acg.uwa.edu.au/p/1704_26_Raffaldi/">DHSM</a>
 
 - Title: Application of subspace detection on a surface seismic network monitoring a deep silver mine
   Year: 2017 <a href="https://papers.acg.uwa.edu.au/d/1704_08_Chambers/08_Chambers.pdf">📖</a>
   Authors: Derrick Chambers, M Shawn Boltz, Jerry Richardson, Seth Finley
   Venue: <a href="https://papers.acg.uwa.edu.au/p/1704_08_Chambers/">DHSM</a>
 
+- Title: Effects of a Three-Dimensional Velocity Structure on the Locations of Coal Mining-Induced Seismicity
+  Year: 2017 <a href="https://paperpile.com/shared/744Oxk/download/6f627f87-38fe-02b8-ace1-b0001c9ba99a">📖</a>
+  Authors: M Shawn Boltz, Derrick Chambers, Peter Swanson
+  Venue: <a href="https://onepetro.org/ARMAUSRMS/proceedings/ARMA16/All-ARMA16/ARMA-2016-149/124818">ARMA</a>
+
 - Title: Seismic monitoring strategies for deep longwall coal mines
   Year: 2016 <a href="https://stacks.cdc.gov/view/cdc/43944/cdc_43944_DS1.pdf">📖</a>
   Authors: Peter Swanson, M Shawn Boltz, Derrick Chambers
   Venue: <a href="https://stacks.cdc.gov/view/cdc/43944">CDC</a>
 
-- Title: Detecting and characterizing coal mine related seismicity in the Western US using subspace methods
-  Year: 2015 <a href="https://paperpile.com/shared/p3CYH3/download/0867b107-20ad-0cf1-bd04-ac4027cce59b">📖</a>
+- Title: Correlation of newly detected mining induced seismicity with subsidence in a Wyoming mining district
+  Year: 2015 <a href="https://paperpile.com/shared/1SxDHo/download/273e96fd-cea9-0eac-83c6-85b5dc03f558">📖</a>
   Authors: Derrick Chambers, Keith Koper, Kristine Pankow, Michael McCarter
   Venue: <a href="https://academic.oup.com/gji/article/203/2/1388/584019">GJI</a>
+
+- Title: Detecting and characterizing coal mine related seismicity in the Western US using subspace methods
+  Year: 2015 <a href="https://paperpile.com/shared/p3CYH3/download/0867b107-20ad-0cf1-bd04-ac4027cce59b">📖</a>
+  Authors: Derrick Chambers, Jessica Wempen, Michael McCarter, Kristine Pankow, Keith Koper
+  Venue: SME
