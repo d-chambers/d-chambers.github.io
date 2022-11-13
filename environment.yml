@@ -1,0 +1,11 @@
+name: derchambers
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - pandas
+  - matplotlib
+  - scipy
+  - jupyter
+  - nbformat

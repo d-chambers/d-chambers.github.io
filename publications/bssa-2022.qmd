@@ -1,0 +1,9 @@
+---
+title: DAS Seismoacoustic Longwall Monitoring
+---
+This is the supplementary material for a submitted paper titled:
+"Seismoacoustic monitoring of a longwall face using distributed acoustic sensing"
+Submitted to BSSA in Nov of 2022.
+
+
+

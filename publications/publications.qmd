@@ -1,0 +1,21 @@
+---
+title: "Selected Publications"
+listing:
+  id: peer-reviewed
+  contents: "contents.yml"
+  sort: "date desc"
+  type: table
+  fields: [image, Year, Title, Authors, Venue]
+---
+
+
+:::{.callout-note}
+:::{.increment}
+- Download a PDF by clicking on the 📖 icon
+- See supplemental material by clicking on the title text (if applicable)
+- See the journal page by clicking on the venue text
+:::
+:::
+
+::: {#sample-listings}
+:::

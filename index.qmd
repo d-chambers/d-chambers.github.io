@@ -1,0 +1,53 @@
+---
+title: "Derrick Chambers"
+about:
+  template: trestles
+  id: hero-heading
+  image: images/profile.jpeg
+  image-shape: round
+  links:
+    - icon: book
+      text: Scholar
+      href: https://scholar.google.com/citations?user=OBeNaFsAAAAJ&hl=en
+
+    - icon: github
+      text: Github
+      href: https://github.com/d-chambers
+
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/derchambers
+---
+
+:::{#hero-heading}
+
+Hi, I'm Derrick. I am a:
+
+* PhD student at the [Colorado School of Mines](https://www.mines.edu/)' [Center for Wave Phenomena](https://cwp.mines.edu/)
+
+* Research Engineer for the [National Institute for Occupational Safety and Health](https://www.cdc.gov/niosh/index.htm)
+
+* [Open-source Developer](https://github.com/d-chambers) 
+
+My professional interests include *mine geophysics*, *distributed acoustic sensing*, and *scientific software development*.
+
+
+## Education
+```
+Colorado School of Mines | Golden, CO
+PhD in Geophysical Engineering | Aug 2021 - current
+```
+```
+University of Utah | Salt Lake City, UT
+M.S. in Mining Engineering | Aug 2013 - May 2015
+```
+```
+University of Utah | Salt Lake City, UT
+B.S. in Mining Engineering | AUg 2007 - May 2013
+```
+## Experience
+```
+National Institute for Occupational Safety and Health 
+Research Engineer | July 2015 - current
+```
+:::

@@ -1,0 +1,47 @@
+project:
+  type: website
+
+website:
+  title: "Derrick"
+
+  navbar:
+    
+    search: true
+    left:
+      - text: Publications
+        file: publications/publications.qmd
+
+#      - text: Presentations
+#        file: presentations/presentations.qmd
+#
+#      - text: Posters
+#        file: posters/posters.qmd
+#
+#      - text: Software
+#        file: software/software.qmd
+#
+#      - text: Blog
+#        file: blog/blog.qmd
+
+    right:
+
+      - icon: twitter
+        href: https://twitter.com/derchambers
+        aria-label: derchambers Twitter
+
+      - icon: github
+        href: https://github.com/d-chambers
+        aria-label: derchambers GitHub
+
+  repo-url: https://github.com/d-chambers/d-chambers.github.io
+  repo-actions: [edit,]
+
+
+format:
+  html:
+    theme: united
+    css: styles.css
+    toc: true
+
+
+
