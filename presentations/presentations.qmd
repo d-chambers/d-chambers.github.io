@@ -1,4 +1,22 @@
+---
+title: "Selected Presentations"
+listing:
+  id: peer-reviewed
+  contents: "contents.yml"
+  sort: "date desc"
+  type: table
+  fields: [image, Year, Title, Authors, Venue]
+---
 
+
+:::{.callout-note}
+:::{.increment}
+- Download the presentation by clicking on the 📖 icon
+:::
+:::
+
+::: {#sample-listings}
+:::
 
 
 

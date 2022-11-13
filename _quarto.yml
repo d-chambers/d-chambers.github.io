@@ -11,14 +11,17 @@ website:
       - text: Publications
         file: publications/publications.qmd
 
-#      - text: Presentations
-#        file: presentations/presentations.qmd
-#
+      - text: Presentations
+        file: presentations/presentations.qmd
+
 #      - text: Posters
 #        file: posters/posters.qmd
 #
 #      - text: Software
 #        file: software/software.qmd
+
+#      - text: Teaching
+#        file: teaching/software.qmd
 #
 #      - text: Blog
 #        file: blog/blog.qmd
