@@ -78,3 +78,5 @@ target/
 _site
 _autosummary
 .quarto/
+
+/.quarto/

@@ -42,6 +42,8 @@ format:
     theme: united
     css: styles.css
     toc: true
+    resources:
+      - _files/*
 
 
 

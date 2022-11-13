@@ -1,9 +1,40 @@
 ---
 title: DAS Seismoacoustic Longwall Monitoring
+format:
+  html:
+    resources:
+      - _files/audio.mp3
 ---
 This is the supplementary material for a submitted paper titled:
 "Seismoacoustic monitoring of a longwall face using distributed acoustic sensing"
 Submitted to BSSA in Nov of 2022.
 
+## Audio samples:
 
+<figure>
+<figcaption>Tap Test</figcaption>
+<audio controls src="https://docs.google.com/uc?export=download&id=1zs7TmwcFeLOOUx0mWXWQwt0oETSHWQx-"> type='audio/wav'
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
+</figure>
 
+<br>
+
+<figure>
+<figcaption>E09_mic_13</figcaption>
+<audio controls src="https://docs.google.com/uc?export=download&id=151wOqhF8q7TYQHrrxoohPpnAh75NPWrM"> type='audio/wav'
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
+</figure>
+
+<br>
+
+<figure>
+<figcaption>E32_mic_07</figcaption>
+<audio controls src="https://docs.google.com/uc?export=download&id=1LBwFSCAcQW8Ay5Cbjlr2JG-XaPlVPABE"> type='audio/wav'
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
+</figure>
