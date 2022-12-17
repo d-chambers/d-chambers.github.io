@@ -1,0 +1,16 @@
+---
+title: "Awesome List"
+---
+
+This is an [awesome list](https://github.com/topics/awesome-list) of things I have found useful that I
+think other people should know about.
+
+## Signal Processing
+
+- [DFT Scaling](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/) :
+    A succinct explanation of the scaling of the DFT and the proper units on the y axis.
+
+## Documentation
+
+- [quartodocs](https://github.com/machow/quartodoc) : A project to build API documentation with
+    [quarto](https://quarto.org/) 

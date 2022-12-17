@@ -26,6 +26,9 @@ website:
 #      - text: Blog
 #        file: blog/blog.qmd
 
+      - text: List
+        file: list/Awesome.qmd
+
     right:
 
       - icon: twitter
