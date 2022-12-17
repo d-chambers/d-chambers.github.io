@@ -23,8 +23,8 @@ website:
 #      - text: Teaching
 #        file: teaching/software.qmd
 #
-#      - text: Blog
-#        file: blog/blog.qmd
+      - text: Blog
+        file: blog/blog.qmd
 
     right:
 
@@ -38,6 +38,7 @@ website:
 
   repo-url: https://github.com/d-chambers/d-chambers.github.io
   repo-actions: [edit,]
+  repo-branch: master
 
 
 format:

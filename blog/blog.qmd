@@ -1,0 +1,8 @@
+---
+title: "blog posts"
+listing:
+  contents: "."
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---

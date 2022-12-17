@@ -1,0 +1,192 @@
+---
+title: "DFT Scaling"
+description: "All About Discrete Fourier Transform Scaling"
+author: "Derrick Chambers"
+date: "12/16/2022"
+categories:
+  - python
+  - signal processing
+---
+
+## Motivation
+
+Imagine a seismogram from an earthquake, perhaps this one:
+
+```{python}
+#| code-fold: true
+
+import obspy
+
+tr = obspy.read().select(component='z')[0]
+tr.plot(show=False)
+```
+
+We can see some relatively low-frequencies associated with background noise and higher frequencies associated
+with the earthquake signal. You might be curious to quantify these differences, so naturally you reach for numpy's fft.
+
+```{python}
+#| code-fold: true
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# get spectra and associated frequencies
+spectra = np.fft.rfft(tr.data)
+frequencies = np.fft.rfftfreq(len(tr.data), 1/tr.stats.sampling_rate)
+
+# now plot
+plt.plot(frequencies, np.abs(spectra))
+plt.show()
+
+```
+
+Looks great, so now we should be good science communicators and label the axis of our graph. Easy enough.
+
+```{python}
+#| code-fold: true
+
+plt.plot(frequencies, np.abs(spectra))
+plt.xlabel('Frequency (Hz)')
+plt.ylabel('Amplitude (???)')
+plt.show()
+
+```
+
+Wait, if the y axis units of our seismogram is counts (which has a max absolute value of about 1_500)
+what are the units of the y axis of our amplitude spectra? And why are the spectra values two orders of magnitude
+larger than the time domain values?
+
+
+## The DFT vs FT
+
+The Fourier transform and its inverse are simply defined as[^wram_fft]:
+
+[^wram_fft]: https://mathworld.wolfram.com/FourierTransform.html
+
+$$
+f(x) = \int_{-\infty}^{\infty} F(k)e^{2 \pi i k x} dx
+$${#eq-ft}
+
+$$
+F(k) = \int_{-\infty}^{\infty} f(x)e^{-2 \pi i k x} dx
+$${#eq-ift}
+
+According to numpy's implementation details [^numpy_fft] the DFT is defined as:
+
+[^numpy_fft]: https://numpy.org/doc/stable/reference/routines.fft.html#implementation-details
+
+$$
+A_k=\sum_{m=0}^{n-1} a_m \exp \left\{-2 \pi i \frac{m k}{n}\right\} \quad k=0, \ldots, n-1
+$${#eq-fft}
+
+And its inverse, the IDFT, is defined as:
+
+$$
+a_m=\frac{1}{n} \sum_{k=0}^{n-1} A_k \exp \left\{2 \pi i \frac{m k}{n}\right\} \quad m=0, \ldots, n-1
+$${#eq-ifft}
+
+The change in sign in the exponent in @eq-ifft is no surprise, we see that as well in @eq-ift, but what
+is the deal with the normalization factor, $\frac{1}{n}$ ?
+
+Before approaching the mathematics, let's build some intuition using simple harmonics about what
+aspects of the signal effect the amplitude spectra. 
+
+## Harmonics
+
+First we setup a few helper functions.
+
+```{python}
+#| code-fold: true
+
+def create_sin_wave(time, frequency=1, amplitude=1, phase_shift=0):
+    """
+    Create a sin wave given a time vector and a desired frequency.
+    """
+    return np.sin(2 * np.pi * frequency * time + phase_shift) * amplitude
+    
+
+def plot_time_and_freq_domains(time, array_dict):
+    """
+    Plot the time and frequency domain representation of 
+    """
+    def plot_time_domain(ax, time, td_dict):
+        """Plot the time domain data"""
+        for label, td in td_dict.items():
+            ax.plot(time, td, label=label)
+        ax.legend()
+        ax.set_title('Time Domain')
+        ax.set_xlabel('Time (s)')
+        ax.set_ylabel('Amplitude')
+    
+    def plot_freq_domain(ax, freqs, fd_dict):
+        """plot the frequency domain data"""
+        for label, fd in fd_dict.items():
+            ax.plot(freqs, np.abs(fd), label=label)
+        ax.legend()
+        ax.set_title('Frequency Domain')
+        ax.set_xlabel('Frequency (Hz)')
+        ax.set_ylabel('Amplitude')
+    
+    fig, axes = plt.subplots(1, 2, figsize=(7.5, 2.5))
+    freqs = np.fft.rfftfreq(len(time), time[1] - time[0])
+    amp_specs = {i: np.fft.rfft(v) for i, v in array_dict.items()}
+    plot_time_domain(axes[0], time, array_dict)
+    plot_freq_domain(axes[1], freqs, amp_specs)
+    return fig, axes
+```
+
+Then explore different attributes of the 
+
+
+### different frequencies
+
+
+Now let's create a few harmonics with different frequencies and plot them and their amplitude spectra:
+
+```{python}
+#| code-fold: true
+
+time = np.linspace(0, 1, 1000)
+td_dict = {
+    '5 Hz': create_sin_wave(time, frequency=5),
+    '10 Hz': create_sin_wave(time, frequency=10),
+    '20 Hz': create_sin_wave(time, frequency=20),
+}
+
+fig, axes = plot_time_and_freq_domains(time, td_dict)
+axes[1].set_xlim(0, 50)
+plt.show()
+```
+
+So the frequency doesn't cause any change in amplitude (this is good). However, rather than observing
+an amplitude of 1, we see each of the frequencies spikes at 500.
+
+
+### different amplitudes
+
+Let's see how the spectra amplitude scales with time domain amplitude:
+
+```{python}
+#| code-fold: true
+
+time = np.linspace(0, 1, 1000)
+td_dict = {
+    'Amp 1': create_sin_wave(time, frequency=5, amplitude=1),
+    'Amp 5': create_sin_wave(time, frequency=5, amplitude=5),
+    'Amp 10': create_sin_wave(time, frequency=5, amplitude=10),
+}
+
+fig, axes = plot_time_and_freq_domains(time, td_dict)
+axes[1].set_xlim(0, 50)
+plt.show()
+```
+
+So the effect is linear; in the amplitude spectra Amp 5 is 5x larger than Amp 1 and 1/2 the size of Amp 10.
+
+
+
+
+
+
+
