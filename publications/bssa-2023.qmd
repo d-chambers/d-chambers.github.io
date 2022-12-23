@@ -9,7 +9,7 @@ This is the supplementary material for a submitted paper titled:
 "Seismoacoustic monitoring of a longwall face using distributed acoustic sensing"
 Submitted to BSSA in Nov of 2022.
 
-## Audio samples:
+## Audio samples
 
 <figure>
 <figcaption>Tap Test</figcaption>
@@ -38,3 +38,10 @@ Submitted to BSSA in Nov of 2022.
         <code>audio</code> element.
 </audio>
 </figure>
+
+## Waveform plots
+
+A directory of PDF plots for each waveform can be found 
+[here](https://drive.google.com/drive/folders/1mWW-trj2cPd8Xriu_mXqi8z3bzULuM8b?usp=share_link). These show
+lead cable channels in blue and microphone channels in orange. The summary of the waveform parametrization
+are shown at the top of the figure, along with event id and magnitude.
