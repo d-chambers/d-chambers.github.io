@@ -41,6 +41,7 @@ website:
 
   repo-url: https://github.com/d-chambers/d-chambers.github.io
   repo-actions: [edit,]
+  repo-branch: master
 
 
 format:
