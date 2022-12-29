@@ -3,11 +3,6 @@
   Authors: Derrick Chambers, Jeffrey Shragge
   Venue: in-review
 
-- Title: Application of a convolutional neural network for seismic phase picking of mining-induced seismicity
-  Year: 2022 <a href="https://paperpile.com/shared/nPYz3k/download/28bc8838-74a6-0e78-b2e6-f9edcd1cc10f">📖</a>
-  Authors: Sean W Johnson, Derrick JA Chambers, Michael S Boltz, Keith D Koper
-  Venue: <a href="https://academic.oup.com/gji/article/224/1/230/5917989">GJI</a>
-
 - Title: Isolating and Tracking Noise Sources across an Active Longwall Mine Using Seismic Interferometry.
   Year: 2022 <a href="https://paperpile.com/shared/xJ9ubW/download/142806d3-7846-0bb6-ac22-9d05e089e26f">📖</a>
   Authors: Santiago Rabade, Sin-Mei Wu, Fan-Chi Lin, Derrick Chambers
@@ -17,6 +12,11 @@
   Year: 2022 <a href="https://paperpile.com/shared/jrJSzN/download/15002f2e-fe6b-040c-9f6f-09578b5c1b45">📖</a>
   Authors: Derrick Chambers, G Kevin Chapin, M Shawn Boltz
   Venue: "RaSiM"
+  
+- Title: Application of a convolutional neural network for seismic phase picking of mining-induced seismicity
+  Year: 2021 <a href="https://paperpile.com/shared/nPYz3k/download/28bc8838-74a6-0e78-b2e6-f9edcd1cc10f">📖</a>
+  Authors: Sean W Johnson, Derrick JA Chambers, Michael S Boltz, Keith D Koper
+  Venue: <a href="https://academic.oup.com/gji/article/224/1/230/5917989">GJI</a>
 
 - Title: "ObsPlus: A Pandas-centric ObsPy expansion pack."
   Year: 2021 <a href="https://joss.theoj.org/papers/10.21105/joss.02696.pdf">📖</a>
