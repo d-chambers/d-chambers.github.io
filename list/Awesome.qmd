@@ -2,8 +2,7 @@
 title: "Awesome List"
 ---
 
-This is an [awesome list](https://github.com/topics/awesome-list) of things I have found useful that I
-think other people should know about.
+This is an [awesome list](https://github.com/topics/awesome-list) of things I think people should know about.
 
 ## Signal Processing
 
