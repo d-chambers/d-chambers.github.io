@@ -14,3 +14,8 @@ This is an [awesome list](https://github.com/topics/awesome-list) of things I th
 - [Quarto](https://quarto.org/) : A framework for building technical documentation in many forms (including this website).
 
 - [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) : A list of quarto related projects / packages.
+
+
+## Online Programming Resources
+
+- [Good Research Code Handbook](https://goodresearch.dev/)
