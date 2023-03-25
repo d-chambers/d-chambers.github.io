@@ -23,8 +23,8 @@ website:
 #      - text: Teaching
 #        file: teaching/software.qmd
 #
-#      - text: Blog
-#        file: blog/blog.qmd
+      - text: Blog
+        file: blog/blog.qmd
 
       - text: List
         file: list/Awesome.qmd
