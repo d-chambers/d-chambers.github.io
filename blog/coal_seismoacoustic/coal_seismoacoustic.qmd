@@ -1,6 +1,7 @@
 ---
-title: "The Sound of Rockbursts"
-description: "A New Geophysical Monitoring Approach for Longwall Coal Mines"
+title: "Rockbursts, Lasers, and Glass Tubes"
+# title: "The Sound of Rockbursts"
+description: "A New Monitoring Approach for Longwall Coal Mines"
 author: 
   - "Derrick Chambers"
   - "Shawn Boltz"
@@ -13,38 +14,27 @@ categories:
   - mining
 ---
 
-<figure>
-<figcaption>event 1</figcaption>
-<audio controls src="https://docs.google.com/uc?export=download&id=151wOqhF8q7TYQHrrxoohPpnAh75NPWrM"> type='audio/wav'
-        Your browser does not support the<code>audio</code> element.
-</audio>
-</figure>
-
 # Motivation
 
-Rockbursts, which are violent, dynamic failures in high stress underground mines,
-pose a significant threat to miners and operations. Much like earthquakes, these
-events can release significant amounts of energy nearly instantaneously, and are
-notoriously difficult to predict.
+
+Rockbursts, or bursts, are violent, dynamic failures which occur in deep underground mines.
+Bursts pose a significant threat to miners and operations, and, much like earthquakes,
+they can release significant amounts of energy and are notoriously difficult to predict.
 
 For hardrock mines, however, seismic monitoring has proven invaluable for understanding
-and managing rockburst risks. Very few deep underground hardrock mines operate without
-seismic monitoring.
+and managing burst-related risks. Very few, if any, deep underground hardrock mines operate 
+without seismic monitoring.
 
 Longwall coal mines, however, have struggled to apply seismic monitoring for a few
-reasons [@swanson2016seismic] including:
+reasons [@swanson2016seismic], including:
 
 - Coal mines operate at much larger scales and mine more quickly than most hardrock mines
 - Use of electronics is heavily restricted due to the potential for explosive atmospheres
-- Coal mines tend to produce many more events per unit time than hardrock mines
+- Coal mines tend to produce many more events than hardrock mines.
 
-The help overcome these challenges, we developed a new approach to
-monitor bursts occurring near the longwall face. The monitoring array is physically
-attached to the mining equipment, so it requires minimal re-configuration as mining advances.
-In addition to recording seismic (elastic) vibrations traveling through the rock and equipment,
-the array also records fluctuations of air-pressure (sounds) near the damage sites.
-And the best part; the electronics can bed deployed kilometers away from the
-monitoring site, the array itself is simply composed of standard fiber-optic cables.
+To help overcome these challenges, we developed a new approach to monitor bursts occurring
+near the longwall face using fiber-optic cable.
+
 
 # Longwall Mining
 
@@ -61,16 +51,31 @@ of the shearer, and C) a profile view of the overburden. After @karacan2008model
 ](images/longwall_concept.png){#fig-longwall width="90%"}
 
 
+:::{.note}
+If you are not familiar with longwall mining [this video](https://www.youtube.com/watch?v=HHaUypSqdzM)
+provides a visual introduction.
+:::
+
+
 # Array Development and Deployment
 
 The core technology of the new monitoring approach is a type of distributed fiber optic sensing (DFOS)
 known as distributed acoustic sensing (DAS). DAS uses low-power, rapid laser pulses to measure subtle
-strains in standard fiber-optic cable. DAS has been used extensively in the oil and gas industry, and
-for other geophysical purposes [@lindsey2021fiber] but is only starting to find applications in mining.
+strains which occur in standard fiber-optic cable. DAS has been used extensively in the oil and gas 
+industry, and for other geophysical purposes [@lindsey2021fiber],
+but is only starting to find applications in mining.
+
 
 Our array consists of lead-cables, which are attached to the shields of the
 longwall, and microphones, or "acoustic transducers", which are just fiber optic
-cable wrapped around thin-walled plastic cylinders.
+cable wrapped around thin-walled plastic cylinders. The monitoring array is physically attached 
+to the mining equipment, so it requires minimal re-configuration as mining advances.
+In addition to recording seismic (elastic) vibrations traveling through the rock and equipment,
+the array also records fluctuations of air-pressure (sounds) near the damage sites.
+Unlike traditional monitoring approaches, the electronics can be deployed kilometers away from the
+monitoring site and the array itself is simply composed of standard fiber-optic cables, eliminating 
+permissibility concerns. 
+
 
 ![
 DAS seismoacoustic array. The array consists of lead cables (red) and microphones (yellow)
@@ -105,32 +110,34 @@ Here are a few examples of the audio recorded by the DAS microphones during thes
 Examining the recorded waveforms, distinct characteristics of lead cables, which again, are attached
 to the longwall shields, and the acoustic streams recorded by the microphones are apparent:
 
-![Data recorded by the seismoacoustic array
+![
+Data recorded by the seismoacoustic array. The blue channels were recorded by lead cables and
+the orange channels were recorded by the microphones.
 ](images/waveforms.png)
 
 The lead cables (blue) tend to record more impulsive, shorter duration signals across the entire
-array whereas the microphones record emergent, long duration signals on a few channels
+array whereas the microphones (orange) record emergent, long duration signals on a few channels
 close to the event damage.
 
 # Monitoring Implications
 
 The array overcomes many of the shortcomings of traditional in-mine seismic monitoring for
-coal mines: sensors seldom need to be moved, and no permissible fiber-optic cable is used
-for the sensing elements.
+coal mines: sensors move with the mining front, and since permissible fiber-optic cable is used
+for the sensing elements, there are no restrictions on its placement.
 
-Additionally, the array records near-field data (sounds and vibrations) of bursting damage.
-These types of recordings may provide information about the extent and mechanisms of the damage,
-energy involved, and gas liberation than far-field seismic sensors alone.
+Additionally, the array records near-field data (sounds and vibrations) associated with burst damage.
+These types of recordings may provide better information about the extent and mechanisms of the damage,
+volume and velocities of ejected rock, and gas liberation than far-field recordings from seismic sensors alone.
 
-However, additional advancements are needed before this type of monitoring can be routinely
-conducted in longwall mines. First, the longwall environment is extremely punishing so
-careful consideration must be given to fastening locations and rugged cable is needed
-for long-term monitoring. Second, the longwall face is extremely noisy with cutting, moving
+However, before this type of monitoring can be routinely conducted in longwall mines, several
+improvements are needed. First, the longwall environment is extremely harsh so
+careful consideration must be given to how the array is attached to the longwall and the grade
+of cable used to create the array. Second, the longwall face is extremely noisy with cutting, moving
 equipment, etc. so deliberate filtering and noise suppression is needed to improve array
 sensitivity.
 
 # Conclusions
 
 Distributed fiber optic sensing may play an important part for stability monitoring
-in underground mines in the future. Here we have demonstrated a monitoring
-strategy for longwall mines. 
+in underground mines in the future. Here we have demonstrated a monitoring strategy
+for monitoring bursts occurring near the mining face at underground longwall mines. 
