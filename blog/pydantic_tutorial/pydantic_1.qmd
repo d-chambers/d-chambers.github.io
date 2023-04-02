@@ -1,6 +1,6 @@
 ---
 title: "Pydantic for the Pragmatic"
-description: "A Scientists Take on Pydantic"
+description: "Part 1: The Basics"
 author: 
   - "Derrick Chambers"
 date: "04/01/2023"
@@ -14,17 +14,30 @@ categories:
 
 [Pydantic](https://docs.pydantic.dev/) is an immensely popular data modeling, parsing, validation,
 library. It powers other popular libraries like [fastAPI](https://fastapi.tiangolo.com/), and
-its founding team [recently started a VC-funded company](https://pydantic.dev/announcement/). I
-believe pydantic is immensely useful for many types of developers, not just professional 
-python programmers. And, although pydantic includes detailed and exhaustive documentation,
-it can be pretty daunting for new developers or development-adjacent practitioners, such as
-scientists. The purpose of this post is to provide a gentle introduction to pydantic with a
-focus on its use in the context of scientific programing.
+its founding team [recently started a VC-funded company](https://pydantic.dev/announcement/). 
+
+Pydantic is useful for many types of developers, not just professional 
+python programmers. Although pydantic includes detailed and exhaustive documentation,
+it can be pretty daunting for development-adjacent practitioners, such as
+(data) scientists. The purpose of this series of posts is to provide a gentle 
+introduction to pydantic  with a focus on its use in the context of scientific programing
+and data modeling.
 
 So, to the humble scientist, why should you use Pydantic? Well it provides the following
 features:
 
-1. A simplification of data modeling
+1. Simple data modeling
+
+2. Validation that gets out of your way
+
+3. Automatic serialization
+
+However, employing pydantic takes a bit of skill to not wind up with a confusing, inefficient,
+object-oriented mess, so let's dive into it.  
+
+# Simple Data Modeling
+
+
 
 
 Pydantic is a powerful and intuitive Python library that can be incredibly useful for scientists
