@@ -19,3 +19,4 @@ This is an [awesome list](https://github.com/topics/awesome-list) of things I th
 ## Online Programming Resources
 
 - [Good Research Code Handbook](https://goodresearch.dev/)
+- [Scientific Python Guide](https://learn.scientific-python.org/)
