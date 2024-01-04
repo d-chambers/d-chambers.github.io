@@ -4,10 +4,12 @@ title: "Awesome List"
 
 This is an [awesome list](https://github.com/topics/awesome-list) of things I think people should know about.
 
-## Signal Processing
+## Math
 
 - [DFT Scaling](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/) :
     A succinct explanation of the scaling of the DFT and the associated units.
+
+- [Better explained](https://betterexplained.com/archives/) : Helpful articles on various mathematical topics.
 
 ## Documentation
 
