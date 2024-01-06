@@ -7,7 +7,9 @@ format:
 ---
 This is the supplementary material for a submitted paper titled:
 "Seismoacoustic monitoring of a longwall face using distributed acoustic sensing"
-Submitted to BSSA in Nov of 2022.
+Submitted to BSSA in Nov of 2022 and published in 2023.
+
+See also [this related blog post](https://blogs.cdc.gov/niosh-science-blog/2023/07/07/rockbursts/). 
 
 ## Audio samples
 
