@@ -6,17 +6,18 @@ about:
   image: images/profile.jpeg
   image-shape: round
   links:
-    - icon: book
-      text: Scholar
-      href: https://scholar.google.com/citations?user=OBeNaFsAAAAJ&hl=en
-
-    - icon: github
-      text: Github
+    
+    - text: "{{< iconify mdi github size=2xl >}}"
       href: https://github.com/d-chambers
 
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/derchambers
+    - text: "{{< iconify academicons google-scholar size=2xl >}}"
+      href: https://scholar.google.com/citations?user=OBeNaFsAAAAJ&hl=en
+
+    - text: "{{< iconify simple-icons researchgate size=2xl >}}"
+      href: https://www.researchgate.net/profile/Derrick-Chambers
+
+    - text: "{{< iconify skill-icons linkedin size=2xl >}}"
+      href: https://www.linkedin.com/in/derrick-chambers-2145a259/
 ---
 
 :::{#hero-heading}

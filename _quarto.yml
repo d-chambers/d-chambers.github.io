@@ -14,6 +14,7 @@ website:
       - text: Presentations
         file: presentations/presentations.qmd
 
+
 #      - text: Posters
 #        file: posters/posters.qmd
 #
@@ -30,10 +31,6 @@ website:
         file: list/Awesome.qmd
 
     right:
-
-      - icon: twitter
-        href: https://twitter.com/derchambers
-        aria-label: derchambers Twitter
 
       - icon: github
         href: https://github.com/d-chambers
