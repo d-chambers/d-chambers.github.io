@@ -20,6 +20,7 @@ See also [this related blog post](https://blogs.cdc.gov/niosh-science-blog/2023/
         <code>audio</code> element.
 </audio>
 </figure>
+[Download](https://docs.google.com/uc?export=download&id=1zs7TmwcFeLOOUx0mWXWQwt0oETSHWQx-)
 
 <br>
 
@@ -31,6 +32,8 @@ See also [this related blog post](https://blogs.cdc.gov/niosh-science-blog/2023/
 </audio>
 </figure>
 
+[Download](https://docs.google.com/uc?export=download&id=151wOqhF8q7TYQHrrxoohPpnAh75NPWrM)
+
 <br>
 
 <figure>
@@ -40,6 +43,9 @@ See also [this related blog post](https://blogs.cdc.gov/niosh-science-blog/2023/
         <code>audio</code> element.
 </audio>
 </figure>
+
+[Download](https://docs.google.com/uc?export=download&id=1LBwFSCAcQW8Ay5Cbjlr2JG-XaPlVPABE)
+
 
 ## Waveform plots
 
