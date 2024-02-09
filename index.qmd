@@ -30,7 +30,7 @@ Hi, I'm Derrick. I am a:
 
 * [Open-source Developer](https://github.com/d-chambers) 
 
-My professional interests include *mine geophysics*, *distributed acoustic sensing*, and *scientific software development*.
+My research interests include *mine geophysics*, *distributed acoustic sensing*, and *rock mechanics*.
 
 
 ## Education
