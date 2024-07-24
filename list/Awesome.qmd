@@ -22,3 +22,7 @@ This is an [awesome list](https://github.com/topics/awesome-list) of things I th
 
 - [Good Research Code Handbook](https://goodresearch.dev/)
 - [Scientific Python Guide](https://learn.scientific-python.org/)
+
+
+## Geology
+- [USGS Geolex](https://ngmdb.usgs.gov/Geolex/search) : A lookup for various geological formations. 
