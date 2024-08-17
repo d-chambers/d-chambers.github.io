@@ -1,1 +1,4 @@
 /* css styles */
+table th {
+  white-space: nowrap; /* Prevent wrapping in column headers */
+}
