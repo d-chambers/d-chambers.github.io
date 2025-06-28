@@ -17,6 +17,8 @@ This is an [awesome list](https://github.com/topics/awesome-list) of things I th
 
 - [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) : A list of quarto related projects / packages.
 
+- [FDSN docs](https://docs.fdsn.org): Excellent documentation on various seismic formats and theory. 
+
 
 ## Online Programming Resources
 
