@@ -17,6 +17,3 @@ listing:
 
 ::: {#sample-listings}
 :::
-
-
-

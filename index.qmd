@@ -6,7 +6,7 @@ about:
   image: images/profile.jpeg
   image-shape: round
   links:
-    
+
     - text: "{{< iconify mdi github size=2xl >}}"
       href: https://github.com/d-chambers
 
@@ -22,39 +22,46 @@ about:
 
 :::{#hero-heading}
 
-Hi, I'm Derrick. I am a:
+Hello, I am Derrick. I am a **research engineer** and **open-source developer** specializing in:
 
-* Research Engineer for the [National Institute for Occupational Safety and Health](https://www.cdc.gov/niosh/index.htm)
+- *mine geophysics*
+- *distributed fiber optic sensing*
+- *rock mechanics*
 
-* [Open-source Developer](https://github.com/d-chambers) 
-
-My research interests include *mine geophysics*, *distributed acoustic sensing*, and *rock mechanics*.
+Reach out to me on [LinkedIn](https://www.linkedin.com/in/derrick-chambers-2145a259/) if you want to get in touch.
 
 ## Education
-```
-Colorado School of Mines | Golden, CO
-PhD in Geophysical Engineering | Aug 2021 - Dec 2024
-```
-```
-University of Utah | Salt Lake City, UT
-MS in Mining Engineering | Aug 2013 - May 2015
-```
-```
-University of Utah | Salt Lake City, UT
-BS in Mining Engineering | AUg 2007 - May 2013
-```
+
+:::{.credential}
+[**Colorado School of Mines**]{.institution} &nbsp;·&nbsp; Golden, CO\
+[PhD in Geophysical Engineering &nbsp;·&nbsp; 2021–2024]{.role}
+:::
+
+:::{.credential}
+[**University of Utah**]{.institution} &nbsp;·&nbsp; Salt Lake City, UT\
+[MS in Mining Engineering &nbsp;·&nbsp; 2013–2015]{.role}
+:::
+
+:::{.credential}
+[**University of Utah**]{.institution} &nbsp;·&nbsp; Salt Lake City, UT\
+[BS in Mining Engineering &nbsp;·&nbsp; 2007–2013]{.role}
+:::
 
 ## Experience
-```
-Institut National de l'Environnement Industriel et Risques 
-Postdoc | Jan 2026 - current
-```
-```
-University College Dublin 
-Data Engineer | Aug 2025 - Oct 2025
-```
-```
-National Institute for Occupational Safety and Health 
-Research Engineer | July 2015 - Aug 2025
-```
+
+:::{.credential}
+[**Institut National de l'Environnement Industriel et Risques**]{.institution} &nbsp;·&nbsp; France\
+[Postdoc &nbsp;·&nbsp; Jan 2026 – present]{.role}
+:::
+
+:::{.credential}
+[**University College Dublin**]{.institution} &nbsp;·&nbsp; Dublin, Ireland\
+[Data Engineer &nbsp;·&nbsp; Aug 2025 – Oct 2025]{.role}
+:::
+
+:::{.credential}
+[**National Institute for Occupational Safety and Health**]{.institution}\
+[Research Engineer &nbsp;·&nbsp; July 2015 – Aug 2025]{.role}
+:::
+
 :::

@@ -5,7 +5,7 @@ website:
   title: "Derrick"
 
   navbar:
-    
+
     search: true
     left:
       - text: Publications
@@ -14,19 +14,6 @@ website:
       - text: Presentations
         file: presentations/presentations.qmd
 
-
-#      - text: Posters
-#        file: posters/posters.qmd
-#
-#      - text: Software
-#        file: software/software.qmd
-
-#      - text: Teaching
-#        file: teaching/software.qmd
-#
-#      - text: Blog
-#        file: blog/blog.qmd
-
       - text: List
         file: list/Awesome.qmd
 
@@ -34,20 +21,18 @@ website:
 
       - icon: github
         href: https://github.com/d-chambers
-        aria-label: derchambers GitHub
+        aria-label: Derrick Chambers GitHub
 
-  repo-url: https://github.com/d-chambers/d-chambers.github.io
-  repo-actions: [edit,]
-  repo-branch: main
 
 
 format:
   html:
-    theme: united
+    theme: flatly
     css: styles.css
     toc: true
+    grid:
+      body-width: 1100px
+      sidebar-width: 200px
+      margin-width: 200px
     resources:
       - _files/*
-
-
-
