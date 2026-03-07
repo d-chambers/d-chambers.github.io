@@ -46,7 +46,15 @@ BS in Mining Engineering | AUg 2007 - May 2013
 
 ## Experience
 ```
+Institut National de l'Environnement Industriel et Risques 
+Postdoc | Jan 2026 - current
+```
+```
+University College Dublin 
+Data Engineer | Aug 2025 - Oct 2025
+```
+```
 National Institute for Occupational Safety and Health 
-Research Engineer | July 2015 - current
+Research Engineer | July 2015 - Aug 2025
 ```
 :::

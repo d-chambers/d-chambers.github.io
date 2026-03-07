@@ -80,3 +80,5 @@ _autosummary
 .quarto/
 
 /.quarto/
+
+**/*.quarto_ipynb
