@@ -55,12 +55,12 @@ Reach out to me on [LinkedIn](https://www.linkedin.com/in/derrick-chambers-2145a
 :::
 
 :::{.credential}
-[**University College Dublin**]{.institution} &nbsp;·&nbsp; Dublin, Ireland\
+[**University College Dublin**]{.institution} &nbsp;·&nbsp; Ireland\
 [Data Engineer &nbsp;·&nbsp; Aug 2025 – Oct 2025]{.role}
 :::
 
 :::{.credential}
-[**National Institute for Occupational Safety and Health**]{.institution}\
+[**National Institute for Occupational Safety and Health**]{.institution} &nbsp;·&nbsp; USA\
 [Research Engineer &nbsp;·&nbsp; July 2015 – Aug 2025]{.role}
 :::
 
