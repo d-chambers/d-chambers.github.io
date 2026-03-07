@@ -19,12 +19,17 @@ This is an [awesome list](https://github.com/topics/awesome-list) of things I th
 
 - [FDSN docs](https://docs.fdsn.org): Excellent documentation on various seismic formats and theory.
 
+## Software
 
-## Online Programming Resources
+- [DASCore](https://dascore.org/) : A Python library for distributed fiber optic sensing.
 
-- [Good Research Code Handbook](https://goodresearch.dev/)
-- [Scientific Python Guide](https://learn.scientific-python.org/)
+- [DASPy](https://github.com/HMZ-03/DASPy) : A Python toolbox for distributed acoustic sensing data processing.
+
+- [XDAS](https://github.com/xdas-dev/xdas) : A Python framework for distributed acoustic sensing (DAS).
+
+- [Orange](https://orangedatamining.com/) : Open-source graphical machine learning and data mining software.
 
 
 ## Geology
+
 - [USGS Geolex](https://ngmdb.usgs.gov/Geolex/search) : A lookup for various geological formations.
