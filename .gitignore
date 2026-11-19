@@ -84,3 +84,4 @@ _autosummary
 .claude
 
 **/*.quarto_ipynb
+/cognitive-test/node_modules/

@@ -32,6 +32,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: cognitive-test/package-lock.json
+
+      - name: Test and build Mental Check-In
+        working-directory: cognitive-test
+        run: |
+          npm ci
+          npm test
+          npm run build
+
       - name: Setup conda
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -57,6 +70,12 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
+
+      - name: Add Mental Check-In to the Pages artifact
+        run: |
+          mkdir -p _site/cognitive-test
+          cp -R cognitive-test/dist/. _site/cognitive-test/
+          test -f _site/cognitive-test/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

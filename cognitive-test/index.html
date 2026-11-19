@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track clarity, reaction time, symbol matching, pattern recall, and focus in your browser.">
+  <title>Mental Check-In · Derrick</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-name" href="../index.html">Derrick</a>
+      <nav aria-label="Mental Check-In">
+        <a href="#assess" data-view="assess">Assess</a>
+        <a href="#history" data-view="history">History</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <noscript><p>Enable JavaScript to run the assessments and view your results.</p></noscript>
+    <section id="assess-view" aria-labelledby="assess-heading">
+      <div class="intro">
+        <div class="title-row">
+          <h1 id="assess-heading">Mental Check-In</h1>
+          <div id="assessment-help" class="assessment-help">
+            <button id="help-button" type="button" aria-label="About these activities" aria-expanded="false" aria-controls="help-panel">?</button>
+            <div id="help-panel" class="help-panel" hidden>
+              <p>For personal tracking only. The one-minute reaction task uses 355 ms as a tracking cutoff. Short runs give fewer observations. The symbol task is an SDMT-style adaptation, and practice can improve scores.</p>
+              <p>For comparisons, use the same task version, device, browser, and input method. This tool has no clinical validation or diagnostic use.</p>
+            </div>
+          </div>
+        </div>
+        <p>Check in with your clarity, reaction time, memory, and focus. All four activities take <strong>3 min 30 sec</strong>, plus setup and optional practice.</p>
+      </div>
+      <div class="cards">
+        <section class="card" aria-labelledby="clarity-heading">
+          <h2 id="clarity-heading">Cognitive clarity</h2>
+          <label for="clarity">How clear does your thinking feel right now?</label>
+          <div class="slider-line">
+            <input id="clarity" type="range" min="0" max="10" value="5" aria-describedby="clarity-anchors">
+            <output id="clarity-value" for="clarity">5/10</output>
+          </div>
+          <div class="anchors" id="clarity-anchors">
+            <span><b>0</b> Extremely foggy</span>
+            <span><b>5</b> Functional but sluggish</span>
+            <span><b>10</b> Exceptionally sharp</span>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="pvt-heading">
+          <h2 id="pvt-heading">Visual reaction time <span class="duration">1 min</span></h2>
+          <p>Tap, click, or press Space as soon as the target appears. Wait for the target between responses.</p>
+          <div class="actions">
+            <button type="button" data-task="pvt">Start PVT</button>
+            <button type="button" class="secondary" data-task="pvt" data-practice>Practice · 20 sec</button>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="sdmt-heading">
+          <h2 id="sdmt-heading">Symbol matching <span class="duration">90 sec</span></h2>
+          <p>Use the legend to match each symbol to its digit. Tap a number or use keys 1–9.</p>
+          <div class="actions">
+            <button type="button" data-task="sdmt">Start SDMT-style task</button>
+            <button type="button" class="secondary" data-task="sdmt" data-practice>Practice · 15 sec</button>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="pattern-heading">
+          <h2 id="pattern-heading">Pattern Recall <span class="duration">30 sec</span></h2>
+          <p>Watch the tiles light up, then tap them in the same order.</p>
+          <div class="actions">
+            <button type="button" data-task="pattern">Start Pattern Recall</button>
+            <button type="button" class="secondary" data-task="pattern" data-practice>Practice · 15 sec</button>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="arrow-heading">
+          <h2 id="arrow-heading">Arrow Focus <span class="duration">30 sec</span></h2>
+          <p>Pick the direction of the middle arrow. The surrounding arrows may point the other way.</p>
+          <div class="actions">
+            <button type="button" data-task="arrow">Start Arrow Focus</button>
+            <button type="button" class="secondary" data-task="arrow" data-practice>Practice · 15 sec</button>
+          </div>
+        </section>
+      </div>
+      <section id="results" class="card results" aria-labelledby="results-heading" hidden>
+        <h2 id="results-heading">Assessment results</h2>
+        <div id="result-details"></div>
+        <div class="actions">
+          <button type="button" id="copy">Copy Text</button>
+          <button type="button" id="copy-json" class="secondary">Copy JSON</button>
+          <button type="button" id="export" class="secondary">Download JSON</button>
+          <button type="button" id="new" class="secondary">New Assessment</button>
+        </div>
+        <div id="clipboard-fallback" hidden>
+          <label for="copy-content">Select and copy the content below</label>
+          <textarea id="copy-content" readonly rows="8"></textarea>
+        </div>
+      </section>
+    </section>
+    <section id="history-view" aria-labelledby="history-heading" hidden>
+      <div class="intro">
+        <h1 id="history-heading" tabindex="-1">Assessment history</h1>
+        <p>Results stay in this browser on this device. Clearing site data can erase them.</p>
+      </div>
+      <div class="actions">
+        <button id="history-json" type="button">Download history JSON</button>
+        <button id="history-csv" class="secondary" type="button">Download history CSV</button>
+      </div>
+      <div id="history-list"></div>
+      <div id="charts"></div>
+    </section>
+    <p id="notice" role="status"></p>
+  </main>
+
+  <dialog id="task-dialog" aria-labelledby="task-heading">
+    <div class="task-top">
+      <h2 id="task-heading"></h2>
+      <button id="cancel-task" type="button" class="secondary">Cancel</button>
+    </div>
+    <div class="progress-row">
+      <progress id="progress" aria-label="Time elapsed"></progress>
+      <span id="remaining" aria-hidden="true"></span>
+    </div>
+    <p id="task-instruction"></p>
+    <div id="pvt-area" hidden>
+      <button type="button" id="target" aria-label="Reaction time response area">
+        <span id="target-label" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="sdmt-area" hidden>
+      <div id="legend" aria-label="Symbol key"></div>
+      <div id="prompt"></div>
+      <div id="keypad" aria-label="Answer keypad"></div>
+    </div>
+    <div id="pattern-area" hidden>
+      <p id="pattern-status"></p>
+      <div id="tiles" aria-label="Pattern recall tiles"></div>
+    </div>
+    <div id="arrow-area" hidden>
+      <div id="arrow-prompt" aria-hidden="true">·</div>
+      <div id="arrow-choices" aria-label="Choose a direction">
+        <button type="button" class="key" data-answer="left">Left</button>
+        <button type="button" class="key" data-answer="right">Right</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="delete-dialog" aria-labelledby="delete-heading">
+    <h2 id="delete-heading">Delete this assessment?</h2>
+    <p id="delete-timestamp"></p>
+    <form method="dialog" class="actions">
+      <button value="keep" class="secondary" autofocus>Keep assessment</button>
+      <button value="delete" class="danger">Delete</button>
+    </form>
+  </dialog>
+</body>
+</html>

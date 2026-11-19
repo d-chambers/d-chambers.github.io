@@ -17,6 +17,9 @@ website:
       - text: List
         file: list/Awesome.qmd
 
+      - text: Mental Check-In
+        href: /cognitive-test/index.html
+
     right:
 
       - icon: github
