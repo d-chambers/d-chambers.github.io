@@ -298,12 +298,14 @@ function updateTask(now) {
       if (state.tile !== null) tileButtons[state.tile - 1].classList.add('lit');
       active.tile = state.tile;
     }
-    if (state.phase !== active.phase) {
+    const overtime = remaining === 0;
+    if (state.phase !== active.phase || overtime !== active.overtime) {
       const recalling = state.phase === 'recall';
-      $('pattern-status').textContent = recalling ? 'Your turn' :
+      $('pattern-status').textContent = recalling ? (overtime ? 'Finish this round' : 'Your turn') :
         state.phase === 'feedback' ? state.feedback : 'Watch the tiles';
       for (const tile of tileButtons) tile.setAttribute('aria-disabled', String(!recalling));
       active.phase = state.phase;
+      active.overtime = overtime;
     }
   } else if (task === 'arrow' && state.trial !== active.trial) {
     const trial = state.trial;

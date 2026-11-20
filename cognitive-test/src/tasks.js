@@ -1,5 +1,5 @@
 export const VERSIONS = Object.freeze({
-  clarity: '1.0.0', pvt: '2.0.0', sdmt: '1.0.0', pattern: '1.1.0', arrow: '1.0.0',
+  clarity: '1.0.0', pvt: '2.0.0', sdmt: '1.0.0', pattern: '1.2.0', arrow: '1.0.0',
 });
 export const TASKS = {
   pvt: { duration: 60_000, practice: 20_000, title: 'Visual reaction time',
@@ -176,12 +176,16 @@ function patternTask(start, random) {
   let trial = null;
   let step = 0;
   let tile = null;
+  let pressedTile = null;
+  let flashEnd = null;
   let feedback = '';
 
   return {
-    get state() { return { phase, tile, feedback }; },
+    get state() { return { phase, tile: pressedTile ?? tile, feedback }; },
+    get hasPendingRound() { return trial !== null || pressedTile !== null; },
     trials,
-    frame(now) {
+    frame(now, canStartRound) {
+      if (pressedTile !== null && now >= flashEnd) pressedTile = null;
       if (now < due || phase === 'recall') return;
       if (phase === 'recall-wait') {
         phase = 'recall';
@@ -189,6 +193,7 @@ function patternTask(start, random) {
         return;
       }
       if (phase === 'ready' || phase === 'feedback') {
+        if (!canStartRound) return;
         trial = { sequence: shuffle(tiles, random).slice(0, level), onsetMs: now - start, responses: [] };
         step = 0;
         phase = 'show';
@@ -210,6 +215,8 @@ function patternTask(start, random) {
     },
     respond(now, inputType, answer) {
       if (phase !== 'recall' || !tiles.includes(answer)) return false;
+      pressedTile = answer;
+      flashEnd = now + 180;
       const correct = answer === trial.sequence[trial.responses.length];
       trial.responses.push({ tile: answer, timeMs: now - start, inputType });
       if (!correct || trial.responses.length === trial.sequence.length) {
@@ -299,25 +306,29 @@ function createShortRun(task, start, duration) {
 
   function finish(now, outcome, why = null) {
     if (status !== 'running') return;
-    ended = Math.min(now, deadline);
+    ended = now;
     task.finish(ended);
     status = outcome;
     reason = why;
   }
 
   function advance(now) {
-    if (now >= deadline) finish(deadline, 'valid');
+    if (now >= deadline && !task.hasPendingRound) finish(deadline, 'valid');
     return status === 'running';
   }
 
   return {
     duration,
-    frame(now) { if (advance(now)) task.frame(now); },
+    frame(now) {
+      if (!advance(now)) return;
+      task.frame(now, now < deadline);
+      if (now >= deadline && !task.hasPendingRound) finish(now, 'valid');
+    },
     respond(now, inputType, answer) {
       if (advance(now) && task.respond(now, inputType, answer)) inputTypes.add(inputType);
     },
-    cancel(now) { finish(now, 'cancelled', 'cancelled'); },
-    interrupt(now, why) { finish(now, 'invalid', why); },
+    cancel(now) { finish(task.hasPendingRound ? now : Math.min(now, deadline), 'cancelled', 'cancelled'); },
+    interrupt(now, why) { finish(task.hasPendingRound ? now : Math.min(now, deadline), 'invalid', why); },
     get state() { return { status, ...task.state }; },
     result() {
       return {

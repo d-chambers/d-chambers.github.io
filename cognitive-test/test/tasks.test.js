@@ -92,7 +92,7 @@ test('practice durations, interruptions, and cancellation never promote partial 
   assert.equal(interruptionReason({ frameGapMs: 20, clockDriftMs: 5 }), null);
 });
 
-test('Pattern Recall displays a sequence, requires the correct order and excludes partial rounds', () => {
+test('Pattern Recall lets a sequence finish after the clock expires and highlights entered tiles', () => {
   const run = createRun('pattern', 0, { random: () => 0 });
   run.frame(600);
   const sequence = [run.state.tile];
@@ -105,17 +105,32 @@ test('Pattern Recall displays a sequence, requires the correct order and exclude
   }
   assert.equal(new Set(sequence).size, 3);
   assert.equal(run.state.phase, 'recall');
-  sequence.forEach((tile, i) => run.respond(2_600 + i * 100, 'keyboard', tile));
+  sequence.forEach((tile, i) => {
+    run.respond(2_600 + i * 100, 'keyboard', tile);
+    assert.equal(run.state.tile, tile);
+  });
   assert.equal(run.state.feedback, 'Correct');
 
-  run.frame(3_350);
+  run.frame(29_950);
+  const finalSequence = [run.state.tile];
   run.frame(30_000);
+  assert.equal(run.state.status, 'running');
+  for (let shown = 0; shown < 4; shown++) {
+    run.frame(30_400 + 630 * shown);
+    run.frame(30_580 + 630 * shown);
+    if (run.state.tile !== null) finalSequence.push(run.state.tile);
+  }
+  assert.equal(run.state.phase, 'recall');
+  finalSequence.forEach((tile, i) => run.respond(32_600 + i * 100, 'keyboard', tile));
+  assert.equal(run.state.tile, finalSequence.at(-1));
+  assert.equal(run.state.status, 'running');
+  run.frame(33_080);
   const result = run.result();
-  assert.equal(result.elapsedMs, 30_000);
+  assert.equal(result.elapsedMs, 33_080);
   assert.deepEqual(result.inputTypes, ['keyboard']);
-  assert.deepEqual(result.summary, { correct: 1, attempts: 1, longest: 3 });
-  assert.equal(result.raw.trials[1].sequence.length, 4);
-  assert.equal(result.raw.trials[1].outcome, 'truncated');
+  assert.deepEqual(result.summary, { correct: 2, attempts: 2, longest: 4 });
+  assert.equal(result.raw.trials.length, 2);
+  assert.equal(result.raw.trials[1].outcome, 'correct');
 });
 
 test('Pattern Recall ends the round at the first wrong tile', () => {
@@ -126,7 +141,10 @@ test('Pattern Recall ends the round at the first wrong tile', () => {
   run.respond(2_500, 'mouse', first === 1 ? 2 : 1);
   assert.equal(run.state.feedback, 'Missed that one');
   run.respond(2_600, 'mouse', first);
+  run.frame(2_680);
+  assert.equal(run.state.tile, null);
   run.frame(30_000);
+  assert.equal(run.result().elapsedMs, 30_000);
   assert.deepEqual(run.result().summary, { correct: 0, attempts: 1, longest: null });
   assert.equal(run.result().raw.trials[0].responses.length, 1);
 });
