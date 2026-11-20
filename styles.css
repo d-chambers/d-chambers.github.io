@@ -44,6 +44,20 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar a:is([href$="/cognitive-test/index.html"], [href$="/cognitive-test/"])::before {
+  content: "🧠";
+  content: "🧠" / "";
+}
+
+.navbar a:is([href$="/cognitive-test/index.html"], [href$="/cognitive-test/"]) .menu-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* ── Page titles ─────────────────────────────────────── */
 h1.title {
   font-weight: 700;

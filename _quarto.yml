@@ -17,7 +17,7 @@ website:
       - text: List
         file: list/Awesome.qmd
 
-      - text: '<span aria-hidden="true">🧠</span><span class="visually-hidden">Mental Check-In</span>'
+      - text: Mental Check-In
         href: /cognitive-test/index.html
 
     right:
